@@ -1,0 +1,7 @@
+*.js
+*.js.map
+/dist
+/output
+/coverage
+/node_modules
+package-lock.json
