@@ -12,7 +12,15 @@ const target_url = "https://info.finance.yahoo.co.jp/ranking/?kd=8&mk=1&tm=d&vl=
     let page;
     
     try {
-        browser = await puppeteer.launch({'headless' : true, 'slowMo' : 0}) as Browser;
+        browser = await puppeteer.launch({
+            'headless' : false,
+            'slowMo' : 100,
+            'args': [ `--window-size=1200,800` ],
+            'defaultViewport': {
+                'width':1200,
+                'height':800
+            }
+        }) as Browser;
         page    = await browser.newPage() as Page;
         
         // 特定のURLへ移動する｡
