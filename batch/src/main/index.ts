@@ -1,5 +1,5 @@
 import { Browser, Page } from "puppeteer";
-import { Company } from './company';
+import { Company } from './entity/company';
 
 const puppeteer = require('puppeteer');
 const target_url = "https://info.finance.yahoo.co.jp/ranking/?kd=8&mk=1&tm=d&vl=a";
